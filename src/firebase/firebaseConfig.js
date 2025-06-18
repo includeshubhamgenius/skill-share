@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDQ46_rBFsX7fLiI8lI13ZLszAji-5Dap0",
-  authDomain: "skillstram.firebaseapp.com",
-  projectId: "skillstram",
-  storageBucket: "skillstram.appspot.com", // fixed
-  messagingSenderId: "808620872780",
-  appId: "1:808620872780:web:f05626e782746a918ed0e9",
-  measurementId: "G-8HHQG561YD"
+   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
